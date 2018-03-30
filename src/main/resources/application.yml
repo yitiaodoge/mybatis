@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+    datasource:
+        name: test
+        url: jdbc:mysql://127.0.0.1:3306/test?useSSL=true
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.winter.model
+
+#pagehelper·ÖÒ³²å¼þ
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
