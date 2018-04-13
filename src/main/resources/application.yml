@@ -13,9 +13,9 @@ mybatis:
   mapper-locations: classpath:mapping/*.xml
   type-aliases-package: com.winter.model
 
-#pagehelper·ÖÒ³²å¼þ
+#pagehelperï¿½ï¿½Ò³ï¿½ï¿½ï¿½
 pagehelper:
     helperDialect: mysql
-    reasonable: true
+    reasonable: false
     supportMethodsArguments: true
     params: count=countSql

@@ -1,9 +1,12 @@
 package com.winter.mapper;
 
 import com.winter.model.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+
+@Repository
 public interface UserMapper {
     int deleteByPrimaryKey(Integer userId);
 

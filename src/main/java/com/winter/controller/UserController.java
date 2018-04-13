@@ -1,6 +1,7 @@
 package com.winter.controller;
 
 
+import com.github.pagehelper.PageInfo;
 import com.winter.model.User;
 import com.winter.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ public class UserController {
     private UserService service;
 
     @GetMapping(value = "/test")
-    public List<User> getUsers(){
+    public PageInfo<User> getUsers(){
         return service.findAllUser(1,1);
     }
 }
