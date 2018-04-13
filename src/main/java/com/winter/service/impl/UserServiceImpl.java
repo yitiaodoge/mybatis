@@ -1,7 +1,6 @@
 package com.winter.service.impl;
 
 import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import com.winter.mapper.UserMapper;
 import com.winter.model.User;
 import com.winter.service.UserService;
@@ -25,10 +24,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public PageInfo<User> findAllUser(int pageNum, int pageSize) {
+    public List<User> findAllUser(int pageNum, int pageSize) {
         PageHelper.startPage(1,1);
         List<User> list = mapper.selectAllUser();
-        PageInfo<User> page = new PageInfo<>(list);
-        return  page;
+        return  list;
     }
 }
